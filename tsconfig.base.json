@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@react-hook-form-fluentui/test": ["packages/test/src/index.ts"]
+      "@raftlabs/react-hook-form-fluentui": [
+        "packages/react-hook-form-fluentui/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
