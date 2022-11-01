@@ -28,7 +28,6 @@ export const CheckboxField: FC<CheckboxFieldProps> = ({
             onChange={onChange}
             inputProps={{ onBlur }}
             checked={!!value}
-            defaultChecked={!!value}
           />
         );
       }}

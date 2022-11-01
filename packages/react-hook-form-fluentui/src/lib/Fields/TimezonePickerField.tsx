@@ -37,7 +37,7 @@ const options: IDropdownOption[] = timezones.map((timezone: TimezoneType) => {
     key: timezone?.tzCode,
   };
 });
-export const TimezonePicker: FC<TimezonePickerProps> = ({
+export const TimezonePickerField: FC<TimezonePickerProps> = ({
   formHook,
   name,
   label,
