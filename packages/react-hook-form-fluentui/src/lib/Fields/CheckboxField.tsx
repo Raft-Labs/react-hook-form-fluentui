@@ -1,4 +1,4 @@
-import { Checkbox, ICheckboxProps } from '@fluentui/react';
+import { Checkbox, ICheckboxProps, useTheme } from '@fluentui/react';
 import { FC } from 'react';
 import { Controller, UseFormReturn } from 'react-hook-form';
 
@@ -15,20 +15,35 @@ export const CheckboxField: FC<CheckboxFieldProps> = ({
   ...props
 }) => {
   const { control } = formHook;
+  const theme = useTheme();
   return (
     <Controller
       name={name}
       control={control}
-      render={({ field, fieldState }) => {
-        const { value, onBlur, onChange } = field;
+      render={({
+        field: { value, onChange, onBlur },
+        fieldState: { error },
+      }) => {
         return (
-          <Checkbox
-            label={label}
-            name={name}
-            onChange={onChange}
-            inputProps={{ onBlur }}
-            checked={!!value}
-          />
+          <>
+            <Checkbox
+              label={label}
+              name={name}
+              onChange={onChange}
+              inputProps={{ onBlur }}
+              checked={!!value}
+            />
+            {error?.type !== 'typeError' && (
+              <span
+                style={{
+                  fontSize: 12,
+                  color: theme.semanticColors.errorText,
+                }}
+              >
+                {error?.message}
+              </span>
+            )}
+          </>
         );
       }}
     />
