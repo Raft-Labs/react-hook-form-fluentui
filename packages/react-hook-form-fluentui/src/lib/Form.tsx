@@ -1,4 +1,4 @@
-import React, { DetailedHTMLProps, FC, FormHTMLAttributes } from 'react';
+import { DetailedHTMLProps, FC, FormHTMLAttributes } from 'react';
 import { FormProvider, UseFormReturn } from 'react-hook-form';
 
 interface FormProps
@@ -10,7 +10,12 @@ interface FormProps
   onSubmit: (values: unknown) => void;
 }
 
-const Form: FC<FormProps> = ({ children, formHook, onSubmit, ...props }) => {
+export const Form: FC<FormProps> = ({
+  children,
+  formHook,
+  onSubmit,
+  ...props
+}) => {
   const { handleSubmit } = formHook;
   return (
     <FormProvider {...formHook}>
@@ -20,5 +25,3 @@ const Form: FC<FormProps> = ({ children, formHook, onSubmit, ...props }) => {
     </FormProvider>
   );
 };
-
-export default Form;
