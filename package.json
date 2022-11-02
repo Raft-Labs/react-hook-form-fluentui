@@ -61,12 +61,18 @@
   "dependencies": {
     "@fluentui/react": "^8.99.0",
     "@swc/helpers": "~0.4.11",
+    "@udecode/plate": "^18.7.0",
     "core-js": "^3.6.5",
     "rc-upload": "^4.3.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.38.0",
     "regenerator-runtime": "0.13.7",
+    "remark-slate": "^1.8.6",
+    "slate": "^0.84.0",
+    "slate-history": "^0.66.0",
+    "slate-hyperscript": "^0.77.0",
+    "slate-react": "^0.83.2",
     "timezones-list": "^3.0.1",
     "tslib": "^2.3.0"
   },

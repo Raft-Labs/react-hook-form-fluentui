@@ -8,6 +8,7 @@ import {
   InputField,
   PasswordInputField,
   RatingField,
+  RichTextEditorField,
   SliderField,
   TimezonePickerField,
   ToggleField,
@@ -58,6 +59,12 @@ export function App() {
       <UploadField formHook={form} name="file1">
         <PrimaryButton text="Upload" name="ipl" />
       </UploadField>
+      <RichTextEditorField
+        formHook={form}
+        placeholder="Type Something here..."
+        name="rtx"
+        label="Bio"
+      />
       <PrimaryButton type="submit" text="Submit To Console" />
     </Form>
   );

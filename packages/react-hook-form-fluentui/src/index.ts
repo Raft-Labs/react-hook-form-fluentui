@@ -9,6 +9,7 @@ export * from './lib/Fields/DropDownField';
 export * from './lib/Fields/InputFIeld';
 export * from './lib/Fields/PasswordField';
 export * from './lib/Fields/RatingField';
+export * from './lib/Fields/RichTextEditorField';
 export * from './lib/Fields/SliderField';
 export * from './lib/Fields/TimezonePickerField';
 export * from './lib/Fields/ToggleField';
