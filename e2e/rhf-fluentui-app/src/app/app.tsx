@@ -5,6 +5,7 @@ import {
   ComboBoxField,
   DatePickerField,
   DropdownField,
+  Form,
   InputField,
   PasswordInputField,
   RatingField,
@@ -14,7 +15,6 @@ import {
   ToggleField,
   UploadField,
 } from '@raftlabs/react-hook-form-fluentui';
-import Form from 'packages/react-hook-form-fluentui/src/lib/Form';
 import { useForm } from 'react-hook-form';
 
 export function App() {
